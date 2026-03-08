@@ -568,6 +568,9 @@
       "side": "Dark"
     },
     {
+      "abbr": [
+        "ABCTTU"
+      ],
       "front": {
         "destiny": "4",
         "gametext": "Deploy on Death Star system or Coruscant system. Target another system. At locations related to target system, opponent's Force drain modifiers are canceled. Effect canceled if opponent controls this system. (Immune to Alter.)",
@@ -5297,7 +5300,7 @@
         "icons": [
           "Interior",
           "Exterior",
-          "Cave",
+          "Creature Site",
           "Planet",
           "Dagobah"
         ],
@@ -53960,7 +53963,7 @@
           "Reflections 2"
         ],
         "imageUrl": "https://res.starwarsccg.org/cards/ReflectionsII-Dark/large/theemperor.gif",
-        "lore": "Leader. Secretive manipulator of the galaxy. Played Darth Vader and Prince Xizor off against one another in his relentless pursuit of 'young Skywalker'.",
+        "lore": "Leader. Secretive manipulator of the galaxy. Played Darth Vader and Prince Xizor off against one another in his relentless pursuit of 'young Skywalker.'",
         "power": "4",
         "subType": "Dark Jedi Master/Imperial",
         "title": "•The Emperor",
@@ -73969,7 +73972,7 @@
           "Scomp Link",
           "Episode VII",
           "First Order",
-          "Permanent Pilot",
+          "Pilot",
           "Nav Computer",
           "Set 25"
         ],
@@ -74974,7 +74977,7 @@
         "printableSlipType": "VIRTUAL"
       },
       "gempId": "204_47",
-      "id": 5101,
+      "id": 7473,
       "legacy": false,
       "printings": [
         {
@@ -75016,7 +75019,7 @@
         "printableSlipType": "VIRTUAL"
       },
       "gempId": "200_109",
-      "id": 1276,
+      "id": 7474,
       "legacy": false,
       "printings": [
         {
@@ -75057,7 +75060,7 @@
         "printableSlipType": "VIRTUAL"
       },
       "gempId": "213_23",
-      "id": 6811,
+      "id": 7475,
       "legacy": false,
       "printings": [
         {
@@ -75096,7 +75099,7 @@
         "printableSlipType": "VIRTUAL"
       },
       "gempId": "211_23",
-      "id": 6419,
+      "id": 7476,
       "legacy": false,
       "printings": [
         {
@@ -75137,7 +75140,7 @@
         "printableSlipType": "VIRTUAL"
       },
       "gempId": "208_35",
-      "id": 5188,
+      "id": 7477,
       "legacy": false,
       "printings": [
         {
@@ -75193,7 +75196,7 @@
         "printableSlipType": "VIRTUAL"
       },
       "gempId": "200_85",
-      "id": 4028,
+      "id": 7478,
       "legacy": false,
       "printings": [
         {
@@ -75243,7 +75246,7 @@
         "printableSlipType": "VIRTUAL"
       },
       "gempId": "200_88",
-      "id": 4030,
+      "id": 7479,
       "legacy": false,
       "printings": [
         {
@@ -75281,7 +75284,7 @@
         "printableSlipType": "VIRTUAL"
       },
       "gempId": "219_27",
-      "id": 7099,
+      "id": 7480,
       "legacy": false,
       "printings": [
         {
@@ -75326,7 +75329,7 @@
         "printableSlipType": "VIRTUAL"
       },
       "gempId": "204_46",
-      "id": 5100,
+      "id": 7481,
       "legacy": false,
       "printings": [
         {
