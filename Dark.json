@@ -64948,7 +64948,7 @@
       "back": {
         "destiny": "7",
         "errataDate": "2026-03-09",
-        "errataNotes": "(Back) Previous text: Taking Control Of The Weapon: While this side up, your Force generation is +2 for each 'blown away' Scarif site. Tarkin Doctrine is immune to Alter and, when it initiates Force loss, may take any one card into hand from Force Pile. Once per turn, if opponent's character just lost from your site, may place it out of play unless opponent loses 1 Force. Tarkin adds 3 to total of Commence Primary Ignition. Flip this card if you have no leaders on Scarif. Place this card out of play if Shield Gate not on table or if Death Star has been 'blown away.'",
+        "errataNotes": "Back previous text: Taking Control Of The Weapon: While this side up, your Force generation is +2 for each 'blown away' Scarif site. Tarkin Doctrine is immune to Alter and, when it initiates Force loss, may take any one card into hand from Force Pile. Once per turn, if opponent's character just lost from your site, may place it out of play unless opponent loses 1 Force. Tarkin adds 3 to total of Commence Primary Ignition. Flip this card if you have no leaders on Scarif. Place this card out of play if Shield Gate not on table or if Death Star has been 'blown away.'",
         "errataSymbol": "E1",
         "gametext": "On The Verge Of Greatness: Deploy [Set 16] Death Star and Scarif systems, Citadel Tower, and Shield Gate. For remainder of game, you may not deploy Endor Shield, non-Imperial characters, or non-Imperial starships. Once per turn, may deploy a Scarif battleground from Reserve Deck; reshuffle. Your non-unique Imperials, vehicles, and capital starships are deploy -1 (-2 if a Star Destroyer). Non-unique Imperials are forfeit +1. Flip this card if Krennic or Tarkin at a Scarif battleground site and Death Star orbiting Scarif. Taking Control Of The Weapon: While this side up, A Bright Center To The Universe cancels opponent's Force drain modifiers everywhere. Vader may make a regular move to a battle just initiated. At Death Star, system it orbits, and sites related to either, your total battle destiny is +1 (+2 if your non-unique card with ability in battle). During your draw phase, may retrieve a non-unique card with ability. Flip this card if you do not have a leader at a Scarif battleground site. Place out of play if Death Star or Shield Gate not on table.",
         "icons": [
@@ -64963,7 +64963,7 @@
       "front": {
         "destiny": "0",
         "errataDate": "2026-03-09",
-        "errataNotes": "(Front) Previous text: On The Verge Of Greatness: Deploy [Set 16] Death Star and Scarif systems, Citadel Tower, Commence Primary Ignition, and Shield Gate. For remainder of game, you may not deploy characters of ability > 4 (except Vader). Vader is power +2 and he (or a Star Destroyer he is piloting) may make a regular move to a battle just initiated. While this side up, once per turn, may deploy a site (or Imperial trooper) to Scarif from Reserve Deck; reshuffle. Flip this card if Krennic or Tarkin on Scarif and Death Star orbiting Scarif.",
+        "errataNotes": "Front previous text: On The Verge Of Greatness: Deploy [Set 16] Death Star and Scarif systems, Citadel Tower, Commence Primary Ignition, and Shield Gate. For remainder of game, you may not deploy characters of ability > 4 (except Vader). Vader is power +2 and he (or a Star Destroyer he is piloting) may make a regular move to a battle just initiated. While this side up, once per turn, may deploy a site (or Imperial trooper) to Scarif from Reserve Deck; reshuffle. Flip this card if Krennic or Tarkin on Scarif and Death Star orbiting Scarif.",
         "errataSymbol": "E1",
         "gametext": "On The Verge Of Greatness: Deploy [Set 16] Death Star and Scarif systems, Citadel Tower, and Shield Gate. For remainder of game, you may not deploy Endor Shield, non-Imperial characters, or non-Imperial starships. Once per turn, may deploy a Scarif battleground from Reserve Deck; reshuffle. Your non-unique Imperials, vehicles, and capital starships are deploy -1 (-2 if a Star Destroyer). Non-unique Imperials are forfeit +1. Flip this card if Krennic or Tarkin at a Scarif battleground site and Death Star orbiting Scarif. Taking Control Of The Weapon: While this side up, A Bright Center To The Universe cancels opponent's Force drain modifiers everywhere. Vader may make a regular move to a battle just initiated. At Death Star, system it orbits, and sites related to either, your total battle destiny is +1 (+2 if your non-unique card with ability in battle). During your draw phase, may retrieve a non-unique card with ability. Flip this card if you do not have a leader at a Scarif battleground site. Place out of play if Death Star or Shield Gate not on table.",
         "icons": [
@@ -72194,7 +72194,8 @@
       ],
       "rarity": "U1",
       "rulings": [
-        "(First function) One Imperial and one Black Sun agent does NOT work."
+        "(First function) One Imperial and one Black Sun agent does NOT work.",
+        "(Second function) 'Emperor' refers to any Sidious persona card with the word 'Emperor' in title (such as Emperor Palpatine but not Master Sidious)."
       ],
       "set": "223",
       "side": "Dark"
