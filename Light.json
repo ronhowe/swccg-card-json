@@ -1071,6 +1071,10 @@
     {
       "front": {
         "armor": "5",
+        "characteristics": [
+          "Republic (starship)",
+          "ship-docking capability"
+        ],
         "deploy": "5",
         "destiny": "2",
         "forfeit": "6",
@@ -7484,6 +7488,9 @@
     },
     {
       "front": {
+        "characteristics": [
+          "Republic (starship)"
+        ],
         "deploy": "3",
         "destiny": "3",
         "forfeit": "4",
@@ -24241,7 +24248,8 @@
         "ability": "2",
         "armor": "3",
         "characteristics": [
-          "accountant"
+          "accountant",
+          "Ishi Tib"
         ],
         "deploy": "2",
         "destiny": "3",
@@ -24286,7 +24294,8 @@
         "ability": "2",
         "armor": "3",
         "characteristics": [
-          "accountant"
+          "accountant",
+          "Ishi Tib"
         ],
         "deploy": "2",
         "destiny": "3",
@@ -36106,6 +36115,7 @@
       "front": {
         "ability": "2",
         "characteristics": [
+          "Dresselian",
           "scout"
         ],
         "deploy": "2",
@@ -41302,6 +41312,7 @@
       "front": {
         "ability": "4",
         "characteristics": [
+          "Dresselian",
           "leader",
           "scout"
         ],
@@ -41317,7 +41328,7 @@
           "Endor"
         ],
         "imageUrl": "https://res.starwarsccg.org/cards/Endor-Light/large/orrimaarko.gif",
-        "lore": "Dresselian Scout and resistance leader. Worked tirelessly to combat the subjugation of his homeworld before Bothans brought him into contact with the Alliance.",
+        "lore": "Dresselian scout and resistance leader. Worked tirelessly to combat the subjugation of his homeworld before Bothans brought him into contact with the Alliance.",
         "power": "4",
         "subType": "Rebel",
         "title": "•Orrimaarko",
@@ -72747,6 +72758,9 @@
       ],
       "front": {
         "ability": "3",
+        "characteristics": [
+          "leader"
+        ],
         "deploy": "3",
         "destiny": "1",
         "extraText": [
@@ -72789,6 +72803,9 @@
       ],
       "front": {
         "ability": "4",
+        "characteristics": [
+          "mechanic"
+        ],
         "deploy": "4",
         "destiny": "6",
         "extraText": [
@@ -73213,6 +73230,9 @@
     {
       "front": {
         "armor": "6",
+        "characteristics": [
+          "ship-docking capability"
+        ],
         "deploy": "6",
         "destiny": "2",
         "forfeit": "7",
@@ -73617,6 +73637,9 @@
         "QJLv"
       ],
       "front": {
+        "characteristics": [
+          "lightsaber"
+        ],
         "destiny": "1",
         "gametext": "Deploy on Qui-Gon or [Episode I] Obi-Wan. May add 1 to Force drain where present. May target a character or creature. Draw two destiny. Target hit, and its forfeit = 0, if total destiny > defense value. While at Watto's Junkyard, Undercover spies here are lost.",
         "icons": [
@@ -73679,6 +73702,9 @@
     {
       "front": {
         "armor": "6",
+        "characteristics": [
+          "ship-docking capability"
+        ],
         "deploy": "6",
         "destiny": "2",
         "forfeit": "7",
@@ -75222,6 +75248,11 @@
     {
       "front": {
         "ability": "4",
+        "characteristics": [
+          "Alderaanian",
+          "spy",
+          "female"
+        ],
         "armor": "5",
         "deploy": "4",
         "destiny": "1",
@@ -75258,6 +75289,9 @@
     },
     {
       "front": {
+        "characteristics": [
+          "female"
+        ],
         "deploy": "2",
         "destiny": "3",
         "extraText": [
@@ -75638,6 +75672,10 @@
       ],
       "front": {
         "armor": "4",
+        "characteristics": [
+          "Rebel (starship)",
+          "ship-docking capability"
+        ],
         "deploy": "3",
         "destiny": "3",
         "forfeit": "5",
@@ -75709,6 +75747,11 @@
       "front": {
         "ability": "4",
         "armor": "5",
+        "characteristics": [
+          "female",
+          "Mandalorian",
+          "padawan"
+        ],
         "deploy": "4",
         "destiny": "2",
         "forfeit": "6",
@@ -76353,6 +76396,10 @@
     {
       "front": {
         "armor": "4",
+        "characteristics": [
+          "Rebel (starship)",
+          "ship-docking capability"
+        ],
         "deploy": "4",
         "destiny": "2",
         "forfeit": "7",
@@ -77406,6 +77453,11 @@
       ],
       "front": {
         "ability": "3",
+        "characteristics": [
+          "smuggler",
+          "Corellian",
+          "scoundrel"
+        ],
         "deploy": "4",
         "destiny": "1",
         "extraText": [
@@ -77452,6 +77504,12 @@
       ],
       "front": {
         "ability": "2",
+        "characteristics": [
+          "smuggler",
+          "blaster rifle",
+          "rifle",
+          "Wookiee"
+        ],
         "deploy": "4",
         "destiny": "1",
         "forfeit": "6",
@@ -77680,6 +77738,9 @@
       ],
       "front": {
         "ability": "4",
+        "characteristics": [
+          "leader"
+        ],
         "deploy": "4",
         "destiny": "1",
         "extraText": [
@@ -77834,6 +77895,9 @@
       ],
       "front": {
         "ability": "3",
+        "characteristics": [
+          "smuggler"
+        ],
         "deploy": "3",
         "destiny": "1",
         "extraText": [
@@ -77878,6 +77942,9 @@
         "LL"
       ],
       "front": {
+        "characteristics": [
+          "lightsaber"
+        ],
         "destiny": "1",
         "gametext": "Deploy on Leia (or Ben Solo or Rey) of ability > 4. Adds 1 to defense value and immunity to attrition. May add 1 to Force drain where present. May target a character or creature for free. Draw two destiny. Target hit, and its forfeit = 0, if total destiny > defense value.",
         "icons": [
@@ -77989,6 +78056,10 @@
       ],
       "front": {
         "ability": "2",
+        "characteristics": [
+          "Dresselian",
+          "scout"
+        ],
         "deploy": "2",
         "destiny": "2",
         "forfeit": "4",
@@ -78140,6 +78211,11 @@
     {
       "front": {
         "ability": "4",
+        "characteristics": [
+          "Dresselian",
+          "leader",
+          "scout"
+        ],
         "deploy": "4",
         "destiny": "1",
         "extraText": [
