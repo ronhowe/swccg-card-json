@@ -4638,6 +4638,9 @@
     {
       "conceptBy": "(Original concept by Kevin Shannon)",
       "front": {
+        "characteristics": [
+          "Republic (starship)"
+        ],
         "deploy": "3",
         "destiny": "2",
         "forfeit": "6",
@@ -4687,6 +4690,9 @@
     {
       "conceptBy": "(Original concept by Kevin Shannon)",
       "front": {
+        "characteristics": [
+          "Republic (starship)"
+        ],
         "deploy": "3",
         "destiny": "2",
         "forfeit": "6",
@@ -12875,6 +12881,9 @@
     {
       "conceptBy": "(Original concept by The Advocate Council)",
       "front": {
+        "characteristics": [
+          "Rebel (starship)"
+        ],
         "deploy": "5",
         "destiny": "1",
         "forfeit": "5",
@@ -37243,6 +37252,7 @@
       "front": {
         "ability": "4",
         "characteristics": [
+          "Sarkan",
           "smuggler"
         ],
         "deploy": "3",
@@ -37286,6 +37296,7 @@
       "front": {
         "ability": "4",
         "characteristics": [
+          "Sarkan",
           "smuggler"
         ],
         "deploy": "3",
@@ -61038,6 +61049,7 @@
       "front": {
         "ability": "2",
         "characteristics": [
+          "Corellian",
           "smuggler"
         ],
         "deploy": "2",
@@ -63704,6 +63716,9 @@
       "conceptBy": "Original concept by Sean Miller",
       "front": {
         "ability": "7",
+        "characteristics": [
+          "Jedi Council member"
+        ],
         "deploy": "5",
         "destiny": "1",
         "errataDate": "2024-12-30",
@@ -63754,6 +63769,9 @@
       "conceptBy": "Original concept by Sean Miller",
       "front": {
         "ability": "7",
+        "characteristics": [
+          "Jedi Council member"
+        ],
         "deploy": "5",
         "destiny": "1",
         "errataDate": "2024-12-30",
@@ -63804,6 +63822,9 @@
       "conceptBy": "Original concept by Sean Miller",
       "front": {
         "ability": "7",
+        "characteristics": [
+          "Jedi Council member"
+        ],
         "deploy": "5",
         "destiny": "1",
         "errataDate": "2024-12-30",

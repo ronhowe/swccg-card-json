@@ -5416,7 +5416,8 @@
       "front": {
         "armor": "5",
         "characteristics": [
-          "Imperial (starship)"
+          "Imperial (starship)",
+          "ship-docking capability"
         ],
         "deploy": "6",
         "destiny": "1",
@@ -18242,7 +18243,8 @@
         "ability": "4",
         "characteristics": [
           "Black Sun agent",
-          "bounty hunter"
+          "bounty hunter",
+          "Sakiyan"
         ],
         "deploy": "4",
         "destiny": "1",
@@ -18292,7 +18294,8 @@
         "characteristics": [
           "assassin",
           "Black Sun agent",
-          "bounty hunter"
+          "bounty hunter",
+          "Sakiyan"
         ],
         "deploy": "4",
         "destiny": "1",
@@ -31759,6 +31762,7 @@
         "ability": "3",
         "armor": "5",
         "characteristics": [
+          "Black Sun agent",
           "bounty hunter",
           "Trade Federation"
         ],
@@ -31809,6 +31813,7 @@
         "ability": "3",
         "armor": "5",
         "characteristics": [
+          "Black Sun agent",
           "bounty hunter",
           "Trade Federation"
         ],
@@ -50085,7 +50090,8 @@
       "front": {
         "armor": "7",
         "characteristics": [
-          "Imperial (starship)"
+          "Imperial (starship)",
+          "ship-docking capability"
         ],
         "deploy": "8",
         "destiny": "1",
