@@ -19453,9 +19453,8 @@
         "gametext": "Deploy beside either player's Lost Pile. That pile is turned face down. Cards from that player's Life Force may not be viewed when they are lost.",
         "imageUrl": "https://res.starwarsccg.org/cards/Premiere-Light/large/eyesinthedark.gif",
         "lore": "'I don't like the look of this.'",
-        "title": "•Eyes In The Dark",
-        "type": "Effect",
-        "uniqueness": "*"
+        "title": "Eyes In The Dark",
+        "type": "Effect"
       },
       "gempId": "1_50",
       "id": 917,
