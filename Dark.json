@@ -74699,7 +74699,8 @@
         "characteristics": [
           "assassin",
           "Black Sun agent",
-          "female"
+          "female",
+          "bodyguard"
         ],
         "deploy": "4",
         "destiny": "2",
@@ -74845,7 +74846,8 @@
         "ability": "5",
         "characteristics": [
           "female",
-          "spy"
+          "spy",
+          "Sith apprentice"
         ],
         "deploy": "5",
         "destiny": "1",
@@ -75123,7 +75125,7 @@
           "Set 26"
         ],
         "imageUrl": "https://res.starwarsccg.org/cards/Virtual26-Dark/large/welcomehomelordtyranus.gif",
-        "lore": "Blank.",
+        "lore": "",
         "subType": "Lost",
         "title": "•Welcome Home, Lord Tyranus",
         "type": "Interrupt",
