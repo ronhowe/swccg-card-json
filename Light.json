@@ -19454,7 +19454,8 @@
         "imageUrl": "https://res.starwarsccg.org/cards/Premiere-Light/large/eyesinthedark.gif",
         "lore": "'I don't like the look of this.'",
         "title": "•Eyes In The Dark",
-        "type": "Effect"
+        "type": "Effect",
+        "uniqueness": "*"
       },
       "gempId": "1_50",
       "id": 917,
