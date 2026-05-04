@@ -79005,7 +79005,10 @@
       "front": {
         "destiny": "3",
         "gametext": "LOST: Relocate Prophecy Of The Force to a site. STARTING: If your starting location was Skywalker Hut, deploy Prophecy Of The Force there, Do, Or Do Not, and Jedi Business. Light Side goes first. Place Interrupt in Reserve Deck.",
-        "icons": [],
+        "icons": [
+	  "Episode I",
+	  "Set 26"
+	],
         "imageUrl": "https://res.starwarsccg.org/cards/Virtual26-Light/large/somethingaboutthisboy.gif",
         "lore": "'What'd he mean by that?' 'I'll tell you later.'",
         "subType": "Lost Or Starting",
