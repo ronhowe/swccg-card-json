@@ -13,6 +13,10 @@ jobs:
   dewit: 
     runs-on: "ubuntu-latest"
 
+    defaults:
+      run:
+        working-directory: cleanup
+
     steps:
       ## https://github.com/actions/checkout
       - uses: actions/checkout@main
@@ -21,29 +25,30 @@ jobs:
           fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
           path: cleanup
 
-      - name: Fix SmartQuotes
+      - name: Fix and commit SmartQuotes
+        id: cleanup
         run: |
           echo "PWD: $(pwd)"
-          if [ $(basename $(pwd)) != "cleanup" ]; then
-            cd cleanup
-          fi
           for JSON in $(ls *.json); do
             sed -i "s/’/'/g" $JSON
             sed -i 's/[”“]/"/g' $JSON
           done
-
-
-      - name: Commit files
-        run: |
           git config --local user.email "devon+github-actions[bot]@hubner.org"
           git config --local user.name "github-actions[bot]"
           git add -A *.json ; true
-          git commit -m "Fixing SmartQuotes" -a ; true
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "Fixing SmartQuotes" -a
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
 
 
       ## https://github.com/ad-m/github-push-action
       - name: Push changes
+        if: steps.cleanup.outputs.changed == 'true'
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.ref }}
+          directory: cleanup
