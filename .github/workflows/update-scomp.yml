@@ -6,66 +6,90 @@ on:
   push: 
     branches: 
       - main
+    paths:
+      - '*.json'
+  workflow_dispatch:
+    inputs:
+      target_branch:
+        description: "Branch to update in swccg-scomp"
+        required: true
+        default: "test/update-scomp-workflow"
 
 jobs:
   update-scomp:
     runs-on: "ubuntu-latest"
+
     steps:
-      - uses: actions/checkout@main
+      - uses: actions/checkout@v4
         with:
           persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
           fetch-depth: 1
           path: swccg-card-json
 
-
-      - name: Commit json files
+      - name: Select swccg-scomp target branch
+        id: target
         run: |
-          echo
-          echo
-          echo "ls"
-          ls -al
-          echo
-          echo "git: [$(which git)]: $(git --version)"
-          echo
-          echo "should be in /home/runner/work/swccg-card-json: [$(pwd)]"
-          echo
-          echo "${{ secrets.SWCCG_CARD_JSON }}" > swccg-card-json.pem
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "branch=${{ github.event.inputs.target_branch }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "branch=main" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Configure SSH
+        env:
+          SWCCG_CARD_JSON_KEY: ${{ secrets.SWCCG_CARD_JSON }}
+        run: |
+          printf '%s\n' "$SWCCG_CARD_JSON_KEY" | tr -d '\r' > swccg-card-json.pem
           chmod 0600 swccg-card-json.pem
-          echo "swccg-card-json.pem info:"
-          ls -al swccg-card-json.pem
-          echo
-          echo "Setting GIT_SSH_COMMAND"
-          export GIT_SSH_COMMAND="ssh -i swccg-card-json.pem -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
-          echo "git clone swccg-scomp"
+          mkdir -p ~/.ssh
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+          ssh-keygen -y -f swccg-card-json.pem > /dev/null
+
+      - name: Clone swccg-scomp
+        env:
+          GIT_SSH_COMMAND: ssh -i swccg-card-json.pem
+          SCOMP_TARGET_BRANCH: ${{ steps.target.outputs.branch }}
+        run: |
+          echo "Target branch: $SCOMP_TARGET_BRANCH"
           git clone git@github.com:swccgpc/swccg-scomp.git swccg-scomp
-          echo
-          echo "ls"
-          ls -al
-          echo
-          ls swccg-scomp
-          echo
-          ls swccg-card-json
-          echo
-          echo "copy json files to swccg-scomp"
-          cp swccg-card-json/*.json swccg-scomp/
-          echo "commit json files to scomp repo"
           cd swccg-scomp
-          echo "should be in swccg-scomp: [$(pwd)]"
+          if git show-ref --verify --quiet "refs/remotes/origin/${SCOMP_TARGET_BRANCH}"; then
+            git checkout -B "$SCOMP_TARGET_BRANCH" "origin/$SCOMP_TARGET_BRANCH"
+          else
+            git checkout -B "$SCOMP_TARGET_BRANCH"
+          fi
+
+      - name: Copy JSON files
+        run: |
+          echo "Copying $(find swccg-card-json -maxdepth 1 -name '*.json' | wc -l) JSON files."
+          cp swccg-card-json/*.json swccg-scomp/
+
+      - name: Commit JSON files
+        id: commit
+        working-directory: swccg-scomp
+        run: |
           git config --local user.email "devon+github-actions[bot]@hubner.org"
           git config --local user.name "github-actions[bot]"
-          git add -A *.json ; true
-          git commit -m "Updating card json files to latest" -a ; true
-          export GIT_SSH_COMMAND="ssh -i ../swccg-card-json.pem -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
-          GIT_SSH_COMMAND="ssh -i ../swccg-card-json.pem -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" git push
-          rm ../swccg-card-json.pem
+          git add -A *.json
+          if git diff --cached --quiet; then
+            echo "No JSON changes to commit."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "Updating card json files to latest"
+            echo "Created commit $(git rev-parse --short HEAD)."
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
 
+      - name: Push changes
+        if: steps.commit.outputs.changed == 'true'
+        working-directory: swccg-scomp
+        env:
+          GIT_SSH_COMMAND: ssh -i ../swccg-card-json.pem
+          SCOMP_TARGET_BRANCH: ${{ steps.target.outputs.branch }}
+        run: |
+          echo "Pushing $(git rev-parse --short HEAD) to $SCOMP_TARGET_BRANCH."
+          git push origin "HEAD:$SCOMP_TARGET_BRANCH"
 
-
-
-
-
-
-
-
-
-
+      - name: Cleanup SSH key
+        if: always()
+        run: rm -f swccg-card-json.pem
