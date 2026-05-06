@@ -31,10 +31,13 @@ jobs:
         id: target
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "repo=jetsaredim/swccg-scomp" >> "$GITHUB_OUTPUT"
             echo "branch=${{ github.event.inputs.target_branch }}" >> "$GITHUB_OUTPUT"
           elif [ "${{ github.ref_name }}" = "main" ]; then
+            echo "repo=swccgpc/swccg-scomp" >> "$GITHUB_OUTPUT"
             echo "branch=main" >> "$GITHUB_OUTPUT"
           else
+            echo "repo=jetsaredim/swccg-scomp" >> "$GITHUB_OUTPUT"
             echo "branch=test/update-scomp-workflow" >> "$GITHUB_OUTPUT"
           fi
 
@@ -49,9 +52,10 @@ jobs:
       - name: Clone swccg-scomp
         env:
           GIT_SSH_COMMAND: ssh -i swccg-card-json.pem
+          SCOMP_TARGET_REPO: ${{ steps.target.outputs.repo }}
           SCOMP_TARGET_BRANCH: ${{ steps.target.outputs.branch }}
         run: |
-          git clone git@github.com:swccgpc/swccg-scomp.git swccg-scomp
+          git clone "git@github.com:${SCOMP_TARGET_REPO}.git" swccg-scomp
           cd swccg-scomp
           if git show-ref --verify --quiet "refs/remotes/origin/${SCOMP_TARGET_BRANCH}"; then
             git checkout -B "$SCOMP_TARGET_BRANCH" "origin/$SCOMP_TARGET_BRANCH"
