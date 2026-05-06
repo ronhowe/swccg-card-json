@@ -36,8 +36,10 @@ jobs:
           fi
 
       - name: Configure SSH
+        env:
+          SWCCG_CARD_JSON_KEY: ${{ secrets.SWCCG_CARD_JSON }}
         run: |
-          printf '%s\n' "${{ secrets.SWCCG_CARD_JSON }}" | tr -d '\r' > swccg-card-json.pem
+          printf '%s\n' "$SWCCG_CARD_JSON_KEY" | tr -d '\r' > swccg-card-json.pem
           chmod 0600 swccg-card-json.pem
           mkdir -p ~/.ssh
           ssh-keyscan github.com >> ~/.ssh/known_hosts
@@ -48,6 +50,7 @@ jobs:
           GIT_SSH_COMMAND: ssh -i swccg-card-json.pem
           SCOMP_TARGET_BRANCH: ${{ steps.target.outputs.branch }}
         run: |
+          echo "Target branch: $SCOMP_TARGET_BRANCH"
           git clone git@github.com:swccgpc/swccg-scomp.git swccg-scomp
           cd swccg-scomp
           if git show-ref --verify --quiet "refs/remotes/origin/${SCOMP_TARGET_BRANCH}"; then
@@ -57,7 +60,9 @@ jobs:
           fi
 
       - name: Copy JSON files
-        run: cp swccg-card-json/*.json swccg-scomp/
+        run: |
+          echo "Copying $(find swccg-card-json -maxdepth 1 -name '*.json' | wc -l) JSON files."
+          cp swccg-card-json/*.json swccg-scomp/
 
       - name: Commit JSON files
         id: commit
@@ -71,6 +76,7 @@ jobs:
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             git commit -m "Updating card json files to latest"
+            echo "Created commit $(git rev-parse --short HEAD)."
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
 
@@ -80,7 +86,9 @@ jobs:
         env:
           GIT_SSH_COMMAND: ssh -i ../swccg-card-json.pem
           SCOMP_TARGET_BRANCH: ${{ steps.target.outputs.branch }}
-        run: git push origin "HEAD:$SCOMP_TARGET_BRANCH"
+        run: |
+          echo "Pushing $(git rev-parse --short HEAD) to $SCOMP_TARGET_BRANCH."
+          git push origin "HEAD:$SCOMP_TARGET_BRANCH"
 
       - name: Cleanup SSH key
         if: always()
