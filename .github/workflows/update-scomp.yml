@@ -40,10 +40,11 @@ jobs:
 
       - name: Configure SSH
         run: |
-          echo "${{ secrets.SWCCG_CARD_JSON }}" > swccg-card-json.pem
+          printf '%s\n' "${{ secrets.SWCCG_CARD_JSON }}" | tr -d '\r' > swccg-card-json.pem
           chmod 0600 swccg-card-json.pem
           mkdir -p ~/.ssh
           ssh-keyscan github.com >> ~/.ssh/known_hosts
+          ssh-keygen -y -f swccg-card-json.pem > /dev/null
 
       - name: Clone swccg-scomp
         env:
