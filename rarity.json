@@ -9,12 +9,12 @@
   "PM3": "Premium (3 copies)",
   "PM5": "Premium (5 copies)",
   "PV": "Preview",
-  "R" : "Rare",
-  "R1" : "Rare 1",
-  "R2" : "Rare 2",
-  "U" : "Uncommon",
-  "U1" : "Uncommon 1",
-  "U2" : "Uncommon 2",
+  "R": "Rare",
+  "R1": "Rare 1",
+  "R2": "Rare 2",
+  "U": "Uncommon",
+  "U1": "Uncommon 1",
+  "U2": "Uncommon 2",
   "UR": "Ultra-Rare",
   "XR": "Exclusive Rare"
 }
